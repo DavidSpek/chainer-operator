@@ -19,7 +19,7 @@ COPY . /go/src/github.com/kubeflow/chainer-operator/
 RUN ./hack/verify-codegen.sh && go test github.com/kubeflow/chainer-operator/...
 RUN go build -o /bin/chainer-operator github.com/kubeflow/chainer-operator/cmd/chainer-operator
 
-FROM alpine:3.7
+FROM alpine:3.13.0
 COPY --from=build /bin/chainer-operator /bin/chainer-operator
 ENTRYPOINT ["/bin/chainer-operator"]
 CMD ["--help"]
