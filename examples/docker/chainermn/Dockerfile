@@ -1,4 +1,4 @@
-FROM chainer/chainer:v4.1.0-python3
+FROM chainer/chainer:v7.8.0-python3
 
 ARG OPENMPI_VERSION="2.1.3"
 ARG CHAINER_MN_VERSION="1.3.0"
